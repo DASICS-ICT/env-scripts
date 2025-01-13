@@ -19,7 +19,7 @@ open_hw_target
 set_property PROBES.FILE $ltx_path [get_hw_devices xcvu19p_0]
 set_property FULL_PROBES.FILE $ltx_path [get_hw_devices xcvu19p_0]
 set_property PROGRAM.FILE $bit_path [get_hw_devices xcvu19p_0]
-program_hw_devices [get_hw_devices xcvu19p_0]
+# program_hw_devices [get_hw_devices xcvu19p_0]
 refresh_hw_device [lindex [get_hw_devices xcvu19p_0] 0]
 display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xcvu19p_0] -filter {CELL_NAME=~"xs_soc_debug/U_JTAG_DDR_SUBSYS/jtag_ddr_subsys_i/jtag_maxi_ila"}]]
 display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xcvu19p_0] -filter {CELL_NAME=~"u_ila_0"}]]
