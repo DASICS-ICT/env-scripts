@@ -239,7 +239,7 @@ proc create_root_design { parentCell } {
   set SOC_CLK [ create_bd_port -dir O -type clk SOC_CLK ]
   set_property -dict [ list \
    CONFIG.ASSOCIATED_BUSIF {SOC_M_AXI} \
-   CONFIG.FREQ_HZ {50000000} \
+   CONFIG.FREQ_HZ {25000000} \
  ] $SOC_CLK
   set SOC_RESETN [ create_bd_port -dir O -from 0 -to 0 -type rst SOC_RESETN ]
   set calib_complete [ create_bd_port -dir O calib_complete ]
@@ -268,7 +268,7 @@ proc create_root_design { parentCell } {
   # Create instance: ddr4_0, and set properties
   set ddr4_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ddr4:2.2 ddr4_0 ]
   set_property -dict [ list \
-   CONFIG.ADDN_UI_CLKOUT1_FREQ_HZ {50} \
+   CONFIG.ADDN_UI_CLKOUT1_FREQ_HZ {25} \
    CONFIG.ADDN_UI_CLKOUT2_FREQ_HZ {25} \
    CONFIG.ADDN_UI_CLKOUT3_FREQ_HZ {None} \
    CONFIG.ADDN_UI_CLKOUT4_FREQ_HZ {None} \
