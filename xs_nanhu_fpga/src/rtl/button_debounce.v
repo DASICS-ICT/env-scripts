@@ -80,7 +80,8 @@ always@(*) begin
 	      nxt_state = FILTER_O;
       DONE:
 	      nxt_state = IDLE;
-
+      default:
+         nxt_state = IDLE;
    endcase
 end
 assign button_rflag = (cur_state == DONE);
