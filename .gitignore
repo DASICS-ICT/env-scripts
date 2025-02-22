@@ -21,3 +21,7 @@ json/
 
 # python third-party libraries are stored temporarily
 psutil/
+
+# rtl related
+core-rtl/
+# xs_nanhu_fpga/src/tcl/cpu_nanhu_files.tcl
