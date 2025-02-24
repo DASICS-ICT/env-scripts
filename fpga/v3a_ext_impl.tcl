@@ -1,6 +1,5 @@
-# synth_design -directive AlternateRoutability ?
 open_project ./xs_nanhu_fpga/xs_nanhu/xs_nanhu.xpr
-synth_design
+open_run synth_1 -name synth_1
 opt_design -directive ExploreArea 
 opt_design -directive AddRemap 
 opt_design -control_set_merge -merge_equivalent_drivers
@@ -12,4 +11,3 @@ report_timing_summary
 report_utilization
 write_bitstream ./xs_fpga_top_debug.bit
 write_debug_probes ./xs_fpga_top_debug.ltx
-
