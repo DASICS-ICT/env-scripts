@@ -10,15 +10,17 @@ project:
 	make -C ./xs_nanhu_fpga update_core_flist CORE_DIR=$(PWD)/core-rtl
 	make -C ./xs_nanhu_fpga nanhu_v3 CORE_DIR=$(PWD)/core-rtl
 
-synth: 
+manu_synth: 
 	vivado -mode batch -source $(PWD)/fpga/v3a_ext_synth.tcl > synth_log.txt 2>&1 & 
 
-impl: 
+manu_impl: 
 	vivado -mode batch -source $(PWD)/fpga/v3a_ext_impl.tcl > impl_log.txt 2>&1 & 
-#	make -C ./xs_nanhu_fpga bitstream CORE_DIR=$(PWD)/core-rtl
+
+auto_impl:
+	make -C ./xs_nanhu_fpga bitstream CORE_DIR=$(PWD)/core-rtl
 
 clean:
 	rm -rf ./core-rtl
 	rm -rf ./xs_nanhu_fpga/xs_nanhu
 	
-.PHONY: rtl project synth impl clean
+.PHONY: rtl project manu_synth manu_impl orig_impl clean
