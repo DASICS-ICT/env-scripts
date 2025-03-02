@@ -24,7 +24,8 @@ psutil/
 
 # rtl related
 core-rtl/
-# xs_nanhu_fpga/src/tcl/cpu_nanhu_files.tcl
+xs_nanhu_fpga/src/tcl/cpu_nanhu_files.tcl
+xs_nanhu_fpga/xs_nanhu/
 xs_fpga_top_debug.bit
 xs_fpga_top_debug.ltx
 synth_log.txt
