@@ -1,4 +1,4 @@
-all: rtl project bitstream
+all: rtl project auto_impl
 
 rtl:
 	mkdir -p core-rtl
@@ -23,4 +23,4 @@ clean:
 	rm -rf ./core-rtl
 	rm -rf ./xs_nanhu_fpga/xs_nanhu
 	
-.PHONY: rtl project manu_synth manu_impl orig_impl clean
+.PHONY: rtl project manu_synth manu_impl auto_impl clean
